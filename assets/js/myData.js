@@ -83,47 +83,47 @@ const MYPROJECTS = [
     {
         name:'CRM AAI Dashboard Calendar',
         description: 'CRM AAI dashboard calendar display and monitor the Sales Officer meeting and status',
-        image:'./assets/images/crm_aai/DashboardCalendar.png'
+        image:'./assets/images/crm_aai/DashboardCalendar.PNG'
     },
     {
         name:'CRM AAI Dashboard Table',
         description: 'CRM AAI dashboard calendar display and monitor the Sales Officer meeting and status',
-        image:'./assets/images/crm_aai/DashboardTable.png'
+        image:'./assets/images/crm_aai/DashboardTable.PNG'
     },
     {
         name:'CRM AAI For Proposal',
         description: 'CRM AAI list of proposal contract that need to be done and assign.',
-        image:'./assets/images/crm_aai/ForProposal.png'
+        image:'./assets/images/crm_aai/ForProposal.PNG'
     },
     {
         name:'CRM AAI Maintenance Services',
         description: 'CRM AAI list of services offer and available sub services.',
-        image:'./assets/images/crm_aai/MaintenanceServices.png'
+        image:'./assets/images/crm_aai/MaintenanceServices.PNG'
     },
     {
         name:'CRM AAI Role Permission',
         description: 'CRM AAI list of user type and their role and permision.',
-        image:'./assets/images/crm_aai/RolePermission.png'
+        image:'./assets/images/crm_aai/RolePermission.PNG'
     },
     {
         name:'CRM AAI Role',
         description: 'CRM AAI list of user role and system access',
-        image:'./assets/images/crm_aai/Roles.png'
+        image:'./assets/images/crm_aai/Roles.PNG'
     },
     {
         name:'CRM AAI User',
         description: 'CRM AAI list of user and thier detail and thier handle warehouse/staff/customer',
-        image:'./assets/images/crm_aai/UserDetails.png'
+        image:'./assets/images/crm_aai/UserDetails.PNG'
     },
     {
         name:'CRM AAI User',
         description: 'CRM AAI list of user and thier detail and thier handle warehouse/staff/customer',
-        image:'./assets/images/crm_aai/UserDetails2.png'
+        image:'./assets/images/crm_aai/UserDetails2.PNG'
     },
     {
         name:'CRM AAI User',
         description: 'CRM AAI list of user and thier detail and thier handle warehouse/staff/customer',
-        image:'./assets/images/crm_aai/UserTable.png'
+        image:'./assets/images/crm_aai/UserTable.PNG'
     },
 ];
 
