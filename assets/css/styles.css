@@ -1346,3 +1346,20 @@ form .button-area {
   /* background-color: #e90606; */
   display: inline-block;
 }
+
+.tooltip-box {
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.tooltip-box.show {
+  opacity: 1;
+}

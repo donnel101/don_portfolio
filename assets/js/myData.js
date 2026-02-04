@@ -284,6 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modal_flip();
     showSkills();
     showTimeline();
+    tooltip();
 });
 
 function modal_flip(){
@@ -353,13 +354,17 @@ function showTimeline(){
             responsibilities += `<li class="ml-4">${responsibility}</li>`
         })
         job.tech_use.forEach(tech_use => {
-            url = ""
+            let tech = {}
             SKILL.filter(skill=>{
                 if(skill.id === tech_use){
-                    url = skill.icon
+                    tech = skill
                 }
             })
-            tech_stack += `<div class="tech_stack mr-1" style="background-image:url(${url})"></div>`
+            tech_stack += `<div 
+                class="tech_stack mr-1" 
+                style="background-image:url(${tech.icon})" 
+                data-tooltip="${tech.name}"
+            ></div>`
         })
         timelineHTML += `
             <div class="container ${job.id%2 ? 'right' : 'left'}">
@@ -384,4 +389,32 @@ function showTimeline(){
         `
     });
     timelineContainer.innerHTML = timelineHTML;
+}
+
+function tooltip() {
+    document.querySelectorAll('[data-tooltip]').forEach(el => {
+        let tooltip;
+
+        el.addEventListener('mouseenter', () => {
+        tooltip = document.createElement('div');
+        tooltip.className = 'tooltip-box';
+        tooltip.textContent = el.dataset.tooltip;
+        document.body.appendChild(tooltip);
+
+        const rect = el.getBoundingClientRect();
+        tooltip.style.top =
+            rect.top + window.scrollY - tooltip.offsetHeight - 8 + 'px';
+        tooltip.style.left =
+            rect.left + window.scrollX + (rect.width - tooltip.offsetWidth) / 2 + 'px';
+
+        requestAnimationFrame(() => tooltip.classList.add('show'));
+        });
+
+        el.addEventListener('mouseleave', () => {
+            if (tooltip) {
+                tooltip.remove();
+                tooltip = null;
+            }
+        });
+    });
 }
