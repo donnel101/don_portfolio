@@ -145,6 +145,31 @@ const MYPROJECTS = [
         description: 'Evol Game Group Chat allow the owner of group chat to show the bet history and message the viewers of his group chat. The viewers can also interact with the owner by replying to his group chat. The owner can also see how many viewer or who are the viewer on his group chat',
         image:'./assets/images/evolgame/group_chat.png'
     },
+    {
+        name:'EvolGame BO Attendance Reward Setting',
+        description: 'Evol Game Back Office Attendance Setting can set the award system for the EvolGame',
+        image:'./assets/images/evolgame_bo/attendance_reward_setting.png'
+    },
+    {
+        name:'EvolGame BO Level Manament',
+        description: 'Evol Game Back Office Level Management can manage the leveling mechanics of EvolGame',
+        image:'./assets/images/evolgame_bo/level_management.png'
+    },
+    {
+        name:'EvolGame BO Log Activity',
+        description: 'Evol Game Back Office Log Activity can monitor the event or activity of all the player using the EvolGame',
+        image:'./assets/images/evolgame_bo/log_activity.png'
+    },
+    {
+        name:'EvolGame BO User Management',
+        description: 'Evol Game Back Office User Management can manage all the player or user of EvolGame',
+        image:'./assets/images/evolgame_bo/user_management.png'
+    },
+    {
+        name:'EvolGame BO Web Access Statistic',
+        description: 'Evol Game Back Office Web Access Statistic can monitor the page visited by user or guest and display the frequency to Bar chart',
+        image:'./assets/images/evolgame_bo/web_access_statistic.png'
+    },
 ];
 
 const SKILL = [
