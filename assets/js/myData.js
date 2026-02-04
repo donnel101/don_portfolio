@@ -204,7 +204,16 @@ const JOB = [
         position:'Programmer',
         timeline:'January 2021 - December 2023',
         description:'',
-        tech_use:[],
+        tech_use:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18],
+        responsibilities:[
+            "Design, develop, and maintain web applications and native apps for company operations.",
+            "Build internal systems supporting multiple international branches.",
+            "Develop dynamic, responsive, and user-friendly interfaces using Vue.js and Vuetify.",
+            "Implement robust backend solutions and RESTful APIs using Laravel.",
+            "Ensure performance optimization, scalability, and maintainability across systems.",
+            "Collaborate with cross-regional teams to align business requirements with technical solutions.",
+            "Create Api using Java springboot that used by other system.",
+        ]
     },
     {
         id:2,
@@ -212,7 +221,15 @@ const JOB = [
         position:'PHP Developer',
         timeline:'March 2024 - March 2025',
         description:'',
-        tech_use:[],
+        tech_use:[1,2,3,4,5,8,9,10,11,12,15,16,19,],
+        responsibilities:[
+            "Develop new pages and modular components for the CRM system.",
+            "Implement interactive data tables and dashboards using AG Grid.",
+            "Build responsive and modern UIs with Vue.js, BootstrapVue, and Velzon.",
+            "Integrate Laravel-based APIs with Vue components for dynamic data handling.",
+            "Optimize the application for performance, scalability, and maintainability.",
+            "Collaborate with the team to plan, design, and deliver new features.",
+        ]
     },
     {
         id:3,
@@ -220,7 +237,15 @@ const JOB = [
         position:'Backend Developer',
         timeline:'June 2025 - Feb 2026',
         description:'',
-        tech_use:[],
+        tech_use:[1,2,3,4,8,9,10,11,12,15,16,20,21],
+        responsibilities:[
+            "Develop and maintain web pages and components using Laravel Blade, vanilla JS, jQuery, and Alpine.js.Implement responsive and user-friendly UI designs.",
+            "Build and integrate APIs for dynamic data handling.",
+            "Optimize application performance and improve overall user experience.",
+            "Collaborate with other developers to ensure smooth project delivery.",
+            "Troubleshoot, debug, and enhance existing features.",
+            "Develop real-time chat and notification systems with Chatify, Pusher, and Laravel Echo.",
+        ]
     },
 ];
 
@@ -322,6 +347,20 @@ function showTimeline(){
     let timelineContainer = document.getElementById("timelineContainer");
     let timelineHTML = "";
     JOB.reverse().forEach(job => {
+        let responsibilities = "";
+        let tech_stack = "";
+        job.responsibilities.forEach(responsibility => {
+            responsibilities += `<li class="ml-4">${responsibility}</li>`
+        })
+        job.tech_use.forEach(tech_use => {
+            url = ""
+            SKILL.filter(skill=>{
+                if(skill.id === tech_use){
+                    url = skill.icon
+                }
+            })
+            tech_stack += `<div class="tech_stack mr-1" style="background-image:url(${url})"></div>`
+        })
         timelineHTML += `
             <div class="container ${job.id%2 ? 'right' : 'left'}">
                 <div class="content">
@@ -331,6 +370,14 @@ function showTimeline(){
                     <div class="desc">
                         <h3>${job.position}</h3>
                         <p>${job.timeline}</p>
+                        <div>
+                            <h3>Responsibilities</h3>
+                            ${responsibilities}
+                        </div>
+                        <div>
+                            <h3>Tech Stact</h3>
+                            ${tech_stack}
+                        </div>
                     </div>
                 </div>
             </div>
