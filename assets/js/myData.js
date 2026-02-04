@@ -125,6 +125,26 @@ const MYPROJECTS = [
         description: 'CRM AAI list of user and thier detail and thier handle warehouse/staff/customer',
         image:'./assets/images/crm/UserTable.png'
     },
+    {
+        name:'EvolGame Game Area',
+        description: 'EvolGame is a platform for playing bacarrat and have chatting system, point system, chatting system',
+        image:'./assets/images/evolgame/game_area.png'
+    },
+    {
+        name:'EvolGame General Chat',
+        description: 'EvolGame General Chat allow players to send message and the admin can also put announcement.',
+        image:'./assets/images/evolgame/general_chat.png'
+    },
+    {
+        name:'EvolGame 1 on 1 Chat',
+        description: 'EvolGame 1 on 1 chat allow players to send private message to the player with 12 hours limit from the moment the invitation is accepted',
+        image:'./assets/images/evolgame/1v1_chat.png'
+    },
+    {
+        name:'EvolGame Group Chat',
+        description: 'Evol Game Group Chat allow the owner of group chat to show the bet history and message the viewers of his group chat. The viewers can also interact with the owner by replying to his group chat. The owner can also see how many viewer or who are the viewer on his group chat',
+        image:'./assets/images/evolgame/group_chat.png'
+    },
 ];
 
 const SKILL = [
